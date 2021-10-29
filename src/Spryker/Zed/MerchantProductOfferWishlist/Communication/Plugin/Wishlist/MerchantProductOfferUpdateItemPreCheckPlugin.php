@@ -8,31 +8,31 @@
 namespace Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist;
 
 use Generated\Shared\Transfer\WishlistItemTransfer;
-use Generated\Shared\Transfer\WishlistPreAddItemCheckResponseTransfer;
+use Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\WishlistExtension\Dependency\Plugin\AddItemPreCheckPluginInterface;
+use Spryker\Zed\WishlistExtension\Dependency\Plugin\UpdateItemPreCheckPluginInterface;
 
 /**
  * @method \Spryker\Zed\MerchantProductOfferWishlist\MerchantProductOfferWishlistConfig getConfig()
  * @method \Spryker\Zed\MerchantProductOfferWishlist\Communication\MerchantProductOfferWishlistCommunicationFactory getFactory()
  * @method \Spryker\Zed\MerchantProductOfferWishlist\Business\MerchantProductOfferWishlistFacadeInterface getFacade()
  */
-class MerchantProductOfferAddItemPreCheckPlugin extends AbstractPlugin implements AddItemPreCheckPluginInterface
+class MerchantProductOfferUpdateItemPreCheckPlugin extends AbstractPlugin implements UpdateItemPreCheckPluginInterface
 {
     /**
      * {@inheritDoc}
      * - Gets product offer collection by `WishlistItem.sku` transfer property.
      * - Checks if product offer exists in collection by `WishlistItem.productOfferReference` transfer object.
-     * - Returns `WishlistPreAddItemCheckResponseTransfer.success=true` if product offer found.
+     * - Returns `WishlistPreUpdateItemCheckResponseTransfer.success=true` if product offer found.
      *
      * @api
      *
      * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
      *
-     * @return \Generated\Shared\Transfer\WishlistPreAddItemCheckResponseTransfer
+     * @return \Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer
      */
-    public function check(WishlistItemTransfer $wishlistItemTransfer): WishlistPreAddItemCheckResponseTransfer
+    public function check(WishlistItemTransfer $wishlistItemTransfer): WishlistPreUpdateItemCheckResponseTransfer
     {
-        return $this->getFacade()->checkWishlistItemProductOfferRelation($wishlistItemTransfer);
+        return $this->getFacade()->checkUpdateWishlistItemProductOfferRelation($wishlistItemTransfer);
     }
 }
