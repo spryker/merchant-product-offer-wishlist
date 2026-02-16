@@ -18,8 +18,6 @@ use Spryker\Zed\MerchantProductOfferWishlist\MerchantProductOfferWishlistDepende
 
 /**
  * @method \Spryker\Zed\MerchantProductOfferWishlist\MerchantProductOfferWishlistConfig getConfig()
- * @method \Spryker\Zed\MerchantProductOfferWishlist\Persistence\MerchantProductOfferWishlistEntityManagerInterface getEntityManager()
- * @method \Spryker\Zed\MerchantProductOfferWishlist\Persistence\MerchantProductOfferWishlistRepositoryInterface getRepository()
  */
 class MerchantProductOfferWishlistBusinessFactory extends AbstractBusinessFactory
 {
