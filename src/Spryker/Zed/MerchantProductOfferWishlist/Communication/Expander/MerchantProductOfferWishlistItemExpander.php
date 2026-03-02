@@ -25,10 +25,6 @@ class MerchantProductOfferWishlistItemExpander implements MerchantProductOfferWi
      */
     protected $merchantFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToProductOfferFacadeInterface $productOfferFacade
-     * @param \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToMerchantFacadeInterface $merchantFacade
-     */
     public function __construct(
         MerchantProductOfferWishlistToProductOfferFacadeInterface $productOfferFacade,
         MerchantProductOfferWishlistToMerchantFacadeInterface $merchantFacade
@@ -37,11 +33,6 @@ class MerchantProductOfferWishlistItemExpander implements MerchantProductOfferWi
         $this->merchantFacade = $merchantFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistItemTransfer
-     */
     public function expandWishlistItem(WishlistItemTransfer $wishlistItemTransfer): WishlistItemTransfer
     {
         if (!$wishlistItemTransfer->getProductOfferReference()) {

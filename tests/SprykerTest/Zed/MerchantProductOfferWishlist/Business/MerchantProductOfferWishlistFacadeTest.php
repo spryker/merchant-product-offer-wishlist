@@ -27,9 +27,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testCheckWishlistItemProductOfferRelationSucceeds(): void
     {
         // Arrange
@@ -45,9 +42,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertTrue($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testCheckWishlistItemProductOfferRelationDoesNotSucceed(): void
     {
         // Arrange
@@ -63,9 +57,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testCheckUpdateWishlistItemProductOfferRelationSucceeds(): void
     {
         // Arrange
@@ -81,9 +72,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertTrue($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testCheckUpdateWishlistItemProductOfferRelationDoesNotSucceed(): void
     {
         // Arrange
@@ -99,9 +87,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeCreationSucceeds(): void
     {
         // Arrange
@@ -117,9 +102,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertTrue($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeCreationDoesNotSucceedWithWrongOfferRelation(): void
     {
         // Arrange
@@ -135,9 +117,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeCreationDoesNotSucceedWhenOfferIsNotActive(): void
     {
         // Arrange
@@ -153,9 +132,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeCreationDoesNotSucceedWhenOfferIsNotApproved(): void
     {
         // Arrange
@@ -171,9 +147,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeCreationDoesNotSucceedWhenMerchantIsNotActive(): void
     {
         // Arrange
@@ -189,9 +162,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeCreationDoesNotSucceedWhenMerchantIsNotApproved(): void
     {
         // Arrange
@@ -207,9 +177,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreAddItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeUpdateSucceeds(): void
     {
         // Arrange
@@ -225,9 +192,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertTrue($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeUpdateDoesNotSucceedWithWrongOfferRelation(): void
     {
         // Arrange
@@ -243,9 +207,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeUpdateDoesNotSucceedWhenOfferIsNotActive(): void
     {
         // Arrange
@@ -261,9 +222,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeUpdateDoesNotSucceedWhenOfferIsNotApproved(): void
     {
         // Arrange
@@ -279,9 +237,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeUpdateDoesNotSucceedWhenMerchantIsNotActive(): void
     {
         // Arrange
@@ -297,9 +252,6 @@ class MerchantProductOfferWishlistFacadeTest extends Unit
         $this->assertFalse($wishlistPreUpdateItemCheckResponseTransfer->getIsSuccess());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWishlistItemProductOfferBeforeUpdateDoesNotSucceedWhenMerchantIsNotApproved(): void
     {
         // Arrange

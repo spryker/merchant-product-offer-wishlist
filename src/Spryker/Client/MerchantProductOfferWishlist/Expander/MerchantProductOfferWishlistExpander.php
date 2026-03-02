@@ -13,13 +13,6 @@ use Generated\Shared\Transfer\WishlistMoveToCartRequestCollectionTransfer;
 
 class MerchantProductOfferWishlistExpander implements MerchantProductOfferWishlistExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WishlistMoveToCartRequestCollectionTransfer $wishlistMoveToCartRequestCollectionTransfer
-     * @param \Generated\Shared\Transfer\WishlistMoveToCartRequestCollectionTransfer $failedWishlistMoveToCartRequestCollectionTransfer
-     * @param \Generated\Shared\Transfer\WishlistItemCollectionTransfer $wishlistItemCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistItemCollectionTransfer
-     */
     public function expandWishlistItemCollectionTransfer(
         WishlistMoveToCartRequestCollectionTransfer $wishlistMoveToCartRequestCollectionTransfer,
         WishlistMoveToCartRequestCollectionTransfer $failedWishlistMoveToCartRequestCollectionTransfer,
@@ -44,13 +37,6 @@ class MerchantProductOfferWishlistExpander implements MerchantProductOfferWishli
         return $wishlistItemCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistMoveToCartRequestCollectionTransfer $wishlistMoveToCartRequestCollectionTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     * @param \Generated\Shared\Transfer\WishlistMoveToCartRequestCollectionTransfer $wishlistMoveToCartRequestCollectionDiffTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistMoveToCartRequestCollectionTransfer
-     */
     public function expandWishlistMoveToCartRequestCollectionTransfer(
         WishlistMoveToCartRequestCollectionTransfer $wishlistMoveToCartRequestCollectionTransfer,
         QuoteTransfer $quoteTransfer,

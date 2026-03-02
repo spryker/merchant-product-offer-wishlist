@@ -13,9 +13,6 @@ use Spryker\Client\MerchantProductOfferWishlist\Expander\MerchantProductOfferWis
 
 class MerchantProductOfferWishlistFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\MerchantProductOfferWishlist\Expander\MerchantProductOfferWishlistExpanderInterface
-     */
     public function createMerchantProductOfferWishlistExpander(): MerchantProductOfferWishlistExpanderInterface
     {
         return new MerchantProductOfferWishlistExpander();

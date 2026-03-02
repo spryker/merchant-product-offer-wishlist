@@ -13,20 +13,10 @@ use Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer;
 
 interface WishlistItemProductOfferValidatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreAddItemCheckResponseTransfer
-     */
     public function validateWishlistItemProductOfferBeforeCreation(
         WishlistItemTransfer $wishlistItemTransfer
     ): WishlistPreAddItemCheckResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer
-     */
     public function validateWishlistItemProductOfferBeforeUpdate(
         WishlistItemTransfer $wishlistItemTransfer
     ): WishlistPreUpdateItemCheckResponseTransfer;

@@ -33,9 +33,6 @@ class MerchantProductOfferWishlistBusinessFactory extends AbstractBusinessFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantProductOfferWishlist\Business\Validator\WishlistItemProductOfferValidatorInterface
-     */
     public function createWishlistItemProductOfferValidator(): WishlistItemProductOfferValidatorInterface
     {
         return new WishlistItemProductOfferValidator(
@@ -44,17 +41,11 @@ class MerchantProductOfferWishlistBusinessFactory extends AbstractBusinessFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToProductOfferFacadeInterface
-     */
     public function getProductOfferFacade(): MerchantProductOfferWishlistToProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(MerchantProductOfferWishlistDependencyProvider::FACADE_PRODUCT_OFFER);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToMerchantFacadeInterface
-     */
     public function getMerchantFacade(): MerchantProductOfferWishlistToMerchantFacadeInterface
     {
         return $this->getProvidedDependency(MerchantProductOfferWishlistDependencyProvider::FACADE_MERCHANT);

@@ -41,10 +41,6 @@ class WishlistItemProductOfferValidator implements WishlistItemProductOfferValid
      */
     protected $merchantFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToProductOfferFacadeInterface $productOfferFacade
-     * @param \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToMerchantFacadeInterface $merchantFacade
-     */
     public function __construct(
         MerchantProductOfferWishlistToProductOfferFacadeInterface $productOfferFacade,
         MerchantProductOfferWishlistToMerchantFacadeInterface $merchantFacade
@@ -53,22 +49,12 @@ class WishlistItemProductOfferValidator implements WishlistItemProductOfferValid
         $this->merchantFacade = $merchantFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreAddItemCheckResponseTransfer
-     */
     public function validateWishlistItemProductOfferBeforeCreation(WishlistItemTransfer $wishlistItemTransfer): WishlistPreAddItemCheckResponseTransfer
     {
         return (new WishlistPreAddItemCheckResponseTransfer())
             ->setIsSuccess($this->hasValidOffer($wishlistItemTransfer));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer
-     */
     public function validateWishlistItemProductOfferBeforeUpdate(
         WishlistItemTransfer $wishlistItemTransfer
     ): WishlistPreUpdateItemCheckResponseTransfer {
@@ -76,11 +62,6 @@ class WishlistItemProductOfferValidator implements WishlistItemProductOfferValid
             ->setIsSuccess($this->hasValidOffer($wishlistItemTransfer));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return bool
-     */
     protected function hasValidOffer(WishlistItemTransfer $wishlistItemTransfer): bool
     {
         if (!$wishlistItemTransfer->getProductOfferReference()) {
@@ -110,11 +91,6 @@ class WishlistItemProductOfferValidator implements WishlistItemProductOfferValid
         return $this->isMerchantActive($merchantReference);
     }
 
-    /**
-     * @param string $merchantReference
-     *
-     * @return bool
-     */
     protected function isMerchantActive(string $merchantReference): bool
     {
         $merchantCriteriaTransfer = (new MerchantCriteriaTransfer())

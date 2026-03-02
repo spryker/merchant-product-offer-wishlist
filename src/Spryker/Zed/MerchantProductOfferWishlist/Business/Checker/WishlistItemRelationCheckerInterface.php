@@ -16,18 +16,8 @@ use Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer;
  */
 interface WishlistItemRelationCheckerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreAddItemCheckResponseTransfer
-     */
     public function checkWishlistItemProductOfferRelation(WishlistItemTransfer $wishlistItemTransfer): WishlistPreAddItemCheckResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer
-     */
     public function checkUpdateWishlistItemProductOfferRelation(
         WishlistItemTransfer $wishlistItemTransfer
     ): WishlistPreUpdateItemCheckResponseTransfer;

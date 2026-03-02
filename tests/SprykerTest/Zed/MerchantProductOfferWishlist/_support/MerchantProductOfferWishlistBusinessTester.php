@@ -76,9 +76,6 @@ class MerchantProductOfferWishlistBusinessTester extends Actor
      */
     protected $wishlistTransfer;
 
-    /**
-     * @param \Codeception\Scenario $scenario
-     */
     public function __construct(Scenario $scenario)
     {
         parent::__construct($scenario);
@@ -89,12 +86,6 @@ class MerchantProductOfferWishlistBusinessTester extends Actor
         ]);
     }
 
-    /**
-     * @param bool $isActive
-     * @param bool $isApproved
-     *
-     * @return void
-     */
     public function setUpMerchant(bool $isActive = true, bool $isApproved = true): void
     {
         $this->merchantTransfer = $this->haveMerchant([
@@ -103,12 +94,6 @@ class MerchantProductOfferWishlistBusinessTester extends Actor
         ]);
     }
 
-    /**
-     * @param bool $isActive
-     * @param bool $isApproved
-     *
-     * @return void
-     */
     public function setUpMerchantProductOffer(bool $isActive = true, bool $isApproved = true): void
     {
         $this->productOfferTransfer = $this->haveProductOffer([
@@ -118,11 +103,6 @@ class MerchantProductOfferWishlistBusinessTester extends Actor
         ]);
     }
 
-    /**
-     * @param bool $setProductOfferReference
-     *
-     * @return \Generated\Shared\Transfer\WishlistItemTransfer
-     */
     public function createProductOfferWishlistItem(bool $setProductOfferReference = true): WishlistItemTransfer
     {
         $wishlistItemTransfer = $this->haveItemInWishlist([

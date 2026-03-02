@@ -23,30 +23,17 @@ class WishlistItemRelationChecker implements WishlistItemRelationCheckerInterfac
      */
     protected $productOfferFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantProductOfferWishlist\Dependency\Facade\MerchantProductOfferWishlistToProductOfferFacadeInterface $productOfferFacade
-     */
     public function __construct(MerchantProductOfferWishlistToProductOfferFacadeInterface $productOfferFacade)
     {
         $this->productOfferFacade = $productOfferFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreAddItemCheckResponseTransfer
-     */
     public function checkWishlistItemProductOfferRelation(WishlistItemTransfer $wishlistItemTransfer): WishlistPreAddItemCheckResponseTransfer
     {
         return (new WishlistPreAddItemCheckResponseTransfer())
             ->setIsSuccess($this->hasProductOffer($wishlistItemTransfer));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return \Generated\Shared\Transfer\WishlistPreUpdateItemCheckResponseTransfer
-     */
     public function checkUpdateWishlistItemProductOfferRelation(
         WishlistItemTransfer $wishlistItemTransfer
     ): WishlistPreUpdateItemCheckResponseTransfer {
@@ -54,11 +41,6 @@ class WishlistItemRelationChecker implements WishlistItemRelationCheckerInterfac
             ->setIsSuccess($this->hasProductOffer($wishlistItemTransfer));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WishlistItemTransfer $wishlistItemTransfer
-     *
-     * @return bool
-     */
     protected function hasProductOffer(WishlistItemTransfer $wishlistItemTransfer): bool
     {
         if (!$wishlistItemTransfer->getProductOfferReference()) {
