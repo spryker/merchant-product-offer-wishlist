@@ -49,6 +49,10 @@ class MerchantProductOfferWishlistItemExpander implements MerchantProductOfferWi
             return $wishlistItemTransfer;
         }
 
+        if ($productOfferTransfer->getMerchantReference()) {
+            return $wishlistItemTransfer->setMerchantReference($productOfferTransfer->getMerchantReference());
+        }
+
         $idMerchant = $productOfferTransfer->getFkMerchant();
 
         if (!$idMerchant) {
